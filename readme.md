@@ -28,3 +28,43 @@ public class MoveHash{
     }
 }
 ```
+
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+void moveHash(const string& str)
+{
+    // Check if the string is empty
+    if (str.empty()) {
+        cout << "" << endl;
+        return;
+    }
+
+    string str1 = "";
+    string str2 = "";
+
+    for (char ch : str) {
+        if (ch == '#')
+            str1 += ch;   // Append '#' characters to str1
+        else
+            str2 += ch;   // Append other characters to str2
+    }
+
+    string result = str1 + str2;
+    cout << result << endl;
+}
+
+int main()
+{
+    string a;
+    cout << "Enter a string: ";
+    getline(cin, a);
+
+    moveHash(a);
+
+    return 0;
+}
+
+```
